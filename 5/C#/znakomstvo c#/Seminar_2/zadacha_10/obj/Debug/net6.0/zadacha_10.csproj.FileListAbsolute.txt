@@ -1,0 +1,15 @@
+C:\Users\prelo\GBstudy\znakomstvo c++\Seminar_2\zadacha_10\obj\Debug\net6.0\zadacha_10.csproj.AssemblyReference.cache
+C:\Users\prelo\GBstudy\znakomstvo c++\Seminar_2\zadacha_10\obj\Debug\net6.0\zadacha_10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prelo\GBstudy\znakomstvo c++\Seminar_2\zadacha_10\obj\Debug\net6.0\zadacha_10.AssemblyInfoInputs.cache
+C:\Users\prelo\GBstudy\znakomstvo c++\Seminar_2\zadacha_10\obj\Debug\net6.0\zadacha_10.AssemblyInfo.cs
+C:\Users\prelo\GBstudy\znakomstvo c++\Seminar_2\zadacha_10\obj\Debug\net6.0\zadacha_10.csproj.CoreCompileInputs.cache
+C:\Users\prelo\GBstudy\znakomstvo c++\Seminar_2\zadacha_10\bin\Debug\net6.0\zadacha_10.exe
+C:\Users\prelo\GBstudy\znakomstvo c++\Seminar_2\zadacha_10\bin\Debug\net6.0\zadacha_10.deps.json
+C:\Users\prelo\GBstudy\znakomstvo c++\Seminar_2\zadacha_10\bin\Debug\net6.0\zadacha_10.runtimeconfig.json
+C:\Users\prelo\GBstudy\znakomstvo c++\Seminar_2\zadacha_10\bin\Debug\net6.0\zadacha_10.dll
+C:\Users\prelo\GBstudy\znakomstvo c++\Seminar_2\zadacha_10\bin\Debug\net6.0\zadacha_10.pdb
+C:\Users\prelo\GBstudy\znakomstvo c++\Seminar_2\zadacha_10\obj\Debug\net6.0\zadacha_10.dll
+C:\Users\prelo\GBstudy\znakomstvo c++\Seminar_2\zadacha_10\obj\Debug\net6.0\refint\zadacha_10.dll
+C:\Users\prelo\GBstudy\znakomstvo c++\Seminar_2\zadacha_10\obj\Debug\net6.0\zadacha_10.pdb
+C:\Users\prelo\GBstudy\znakomstvo c++\Seminar_2\zadacha_10\obj\Debug\net6.0\zadacha_10.genruntimeconfig.cache
+C:\Users\prelo\GBstudy\znakomstvo c++\Seminar_2\zadacha_10\obj\Debug\net6.0\ref\zadacha_10.dll

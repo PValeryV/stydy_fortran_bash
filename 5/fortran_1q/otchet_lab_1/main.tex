@@ -1,0 +1,30 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[T2A]{fontenc}	% Кодировка
+\usepackage[utf8]{inputenc}	% Кодировка исходного текста
+\usepackage[russian]{babel}	% Локализация и переносы
+
+\usepackage{cmap}	% Поиск и копирование в PDF
+\usepackage{listings}
+\lstset{language=[90]Fortran,
+  basicstyle=\ttfamily,
+% columns=flexible,
+% columns=spaceflexible,
+% columns=fullflexible,
+  showstringspaces=false,
+  breaklines=true,
+  keywordstyle=\color{red},
+  commentstyle=\color{green},
+  morecomment=[l]{!\ }
+}
+
+\usepackage{geometry}	% Поля
+	\geometry{left=35mm, right=10mm, top=20mm, bottom=20mm}
+\begin{document}
+\include{Kurs_Titul.tex}
+\contentsname
+\include{introduction.tex}
+\include{first_section.tex}
+\include{two_section.tex}
+\include{conclusion.tex}
+\end{document}

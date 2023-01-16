@@ -1,0 +1,73 @@
+
+\title{Глава1}
+
+\chaptername{ Реализация и анализ применения различных структур данных}
+\section{Реализация массива строк}
+ Данной реализации было создано несколько массивов строк для фамилий, специальнойстей и для карьерного списка и две строки для сортировки.
+\begin{lstlisting}
+   character(SURNAME_LEN, kind=CH_)                :: tmpSurname = "", Surnames(AMOUNT) = ""
+   character(POST_LEN, kind=CH_)                   :: tmpPost = "", Post(AMOUNT) = "",Doljnost(4) = ""
+\end{lstlisting}
+   Сортировка производится методом пузырька. Поиск людей который необходимо поменять местами осуществляется следующим образом:
+\begin{lstlisting}
+         if (FindLoc(Doljnost,Post(j),dim=1)>Findloc(Doljnost,Post(j+1),dim =1)) then
+            Swap = .true.
+            else if (Surnames(j)>Surnames(j+1) .and. Post(j) == Post(j+1)) then
+               Swap = .true.
+         end if
+\end{lstlisting}
+  Здесь же осуществляется регулярный доступ к данным.
+
+\section{Реализация массива символов}
+В данной реализации необходимо обратить на следующий фрагмент, согласно которому считанные фамиилии и долности будут храниться в "столбцах":
+\begin{lstlisting}
+   character(kind=CH\_)                ::  Surnames(SURNAME_LEN,AMOUNT) = ""
+   character(kind=CH\_)                ::  Post(Post_LEN,AMOUNT) = "",Doljnost(POST\_LEN,DOLJNOST\_LEN) = ""
+\end{lstlisting}
+Распологая данные таким образом мы предоставляем регулярный доступ к данным при сортривке.
+Сортировка производится так же методом пузырька, проверка производится таким образом:
+\begin{lstlisting}
+         Swap = swap_doljnost(Doljnost,Post(:,j),Post(:,j+1))
+         if(.not. Swap .and. GT(Surnames(:,j),Surnames(:,j+1)) .and. All(Post(:,j)==Post(:,j+1))) Swap = .true.
+    
+    pure logical function swap_doljnost(Doljnost,arr1,arr2)
+      character (kind=CH_) arr1(:), Doljnost(:,:),arr2(:)
+      intent (in) arr1,Doljnost,arr2
+      integer i,j,k
+      swap_doljnost = .false.
+      j=0
+      k=0
+      do  i=1, DOLJNOST\_LEN
+         if (ALL(arr1(:)==Doljnost(:,i)))j=i
+         if (ALL(arr2(:)==Doljnost(:,i)))k=i
+      end do
+      swap_doljnost = j>k
+   end function swap_doljnost
+
+   pure logical function GT(arr1, arr2)
+    character(kind=CH_), intent(in) :: arr1(:), arr2(:)
+
+    integer :: i
+
+    do i = 1, Min(Size(arr1), Size(arr2)) - 1
+       if (arr1(i) /= arr2(i)) &
+          exit
+    end do
+    GT = arr1(i) > arr2(i)
+ end function GT
+\end{lstlisting}
+ Благодаря правильному расположению данных в массивах осуществляется регулярный доступ к памяти при перемещении фамилий
+\begin{lstlisting}
+         if (Swap) then
+            tmpSurname        = Surnames(:,j+1)
+            Surnames(:,j+1)   = Surnames(:,j)
+            Surnames(:,j)     = tmpSurname
+
+            tmpPost           = Post(:,j+1)
+            Post(:,j+1)       = Post(:,j)
+            Post(:,j)         = tmpPost
+         end if
+\end{lstlisting}
+\section{Реализация массива структур}
+\section{Реализация рекурсивных процедуры в массиве структур}
+\section{динамического списка}
